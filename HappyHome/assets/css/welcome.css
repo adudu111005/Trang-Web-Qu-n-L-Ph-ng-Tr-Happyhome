@@ -1,0 +1,334 @@
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+/* TOÀN BỘ TRANG */
+body {
+    min-height: 100vh;
+    background-color: #f4f7fb;
+
+    display: flex;
+}
+
+
+/* =========================
+   PHẦN BÊN TRÁI
+========================= */
+
+.left {
+    width: 50%;
+    min-height: 100vh;
+
+    background: linear-gradient(145deg, #123b56, #087e8b);
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 70px;
+}
+
+
+/* LOGO */
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+
+    margin-bottom: 60px;
+}
+
+
+.logo span {
+    color: #67e8c5;
+}
+
+
+/* TIÊU ĐỀ */
+.left h1 {
+    font-size: 42px;
+    line-height: 1.3;
+
+    margin-bottom: 25px;
+}
+
+
+/* ĐOẠN VĂN */
+.left p {
+    font-size: 17px;
+    line-height: 1.8;
+
+    color: #dcecf0;
+
+    max-width: 480px;
+}
+
+
+/* DANH SÁCH CHỨC NĂNG */
+.features {
+    margin-top: 40px;
+
+    line-height: 2.5;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   PHẦN BÊN PHẢI
+========================= */
+
+.right {
+    width: 50%;
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+/* HỘP ĐĂNG NHẬP */
+.login-box {
+    width: 100%;
+    max-width: 430px;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* TIÊU ĐỀ ĐĂNG NHẬP */
+.login-box h2 {
+    font-size: 28px;
+
+    color: #173b50;
+
+    margin-bottom: 10px;
+}
+
+
+/* DÒNG MÔ TẢ */
+.subtitle {
+    color: #888;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   CHỌN VAI TRÒ
+========================= */
+
+.role-title {
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 12px;
+
+    color: #444;
+}
+
+
+.roles {
+    display: flex;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+}
+
+
+/* Ô CHỌN VAI TRÒ */
+.roles label {
+    flex: 1;
+
+    text-align: center;
+
+    padding: 12px 5px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    color: #555;
+}
+
+
+/* ẨN NÚT RADIO */
+.roles input {
+    display: none;
+}
+
+
+/* KHI ĐƯỢC CHỌN */
+.roles label:has(input:checked) {
+    background-color: #e5f5f3;
+
+    border-color: #087e8b;
+
+    color: #087e8b;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   Ô NHẬP DỮ LIỆU
+========================= */
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #444;
+}
+
+
+.input-group input {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+
+/* KHI CLICK VÀO Ô NHẬP */
+.input-group input:focus {
+    border-color: #087e8b;
+}
+
+
+/* =========================
+   NÚT ĐĂNG NHẬP
+========================= */
+
+.btn-login {
+    width: 100%;
+
+    padding: 15px;
+
+    background-color: #087e8b;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.btn-login:hover {
+    background-color: #066570;
+}
+
+
+/* =========================
+   ĐĂNG KÝ
+========================= */
+
+.register {
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-size: 14px;
+
+    color: #777;
+}
+
+
+.register a {
+    color: #087e8b;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   RESPONSIVE - ĐIỆN THOẠI
+========================= */
+
+@media (max-width: 800px) {
+
+    body {
+        flex-direction: column;
+    }
+
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+
+    .left {
+        min-height: 300px;
+
+        padding: 35px;
+    }
+
+
+    .logo {
+        margin-bottom: 25px;
+    }
+
+
+    .left h1 {
+        font-size: 30px;
+    }
+
+
+    /* ẨN DANH SÁCH TRÊN ĐIỆN THOẠI */
+    .features {
+        display: none;
+    }
+
+
+    .right {
+        padding: 25px 15px;
+    }
+}
